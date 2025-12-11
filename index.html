@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>楽天・Amazon運営代行 | JBoundex | 売上最大化に特化した運営支援</title>
+    <link rel="icon" type="image/png" href="images/jboundex_logo.png">
     <style>
         * {
             margin: 0;
@@ -43,6 +44,7 @@
         .logo {
             font-size: 32px;
             font-weight: 900;
+            font-family: 'Segoe UI Black', 'Arial Black', 'Helvetica Neue', 'ヒラギノ角ゴ Pro W6', 'Yu Gothic', sans-serif;
             color: #bc002d;
             letter-spacing: 3px;
             text-decoration: none;
@@ -757,6 +759,38 @@
             margin-bottom: 20px;
         }
 
+        .company-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff8f8;
+            border-left: 4px solid #bc002d;
+            border-radius: 6px;
+        }
+
+        .company-info h3 {
+            font-size: 18px;
+            color: #bc002d;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .company-address-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .company-icon {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .company-address {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
         .contact-pricing {
             font-weight: bold;
             color: #bc002d;
@@ -873,48 +907,98 @@
 
         /* ==================== フッター ==================== */
         footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
+            background-color: #0f0f11;
+            color: #f5f5f5;
+            padding: 50px 0;
         }
 
         footer .container {
-            border-top: 2px solid #bc002d;
-            padding-top: 20px;
+            border-top: 1px solid #1f1f22;
+            padding-top: 30px;
         }
 
-        footer p {
-            margin-bottom: 10px;
-            font-size: 14px;
+        .footer-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px 60px;
+            align-items: flex-start;
+            max-width: 1100px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .footer-column {
+            text-align: left;
         }
 
         .footer-logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 900;
             color: #bc002d;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .footer-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 12px;
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #f5f5f5;
         }
 
-        .footer-links a {
-            color: #aaa;
+        .footer-address-block {
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+        .footer-address-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-icon {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .footer-address-text {
+            color: #ddd;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 15px;
+        }
+
+        .footer-list a {
+            color: #cfcfcf;
             text-decoration: none;
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
+        .footer-list a:hover {
             color: #bc002d;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-copy {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: #9a9a9a;
         }
 
         /* ==================== レスポンシブ対応 ==================== */
@@ -1323,19 +1407,24 @@
                     <p>日本市場に興味はあるけれど、どこから始めればよいか分からない場合は、まずは無料相談で商材と目標をお聞かせください。</p>
                     <p class="contact-pricing">月額¥51,500から柔軟にスタートできます。まずはご連絡ください。</p>
                     <p>御社の状況に合わせた現実的なテストプランをご提案します。最小限のリスクで日本市場の可能性を検証できます。</p>
+                    <div class="company-info">
+                        <h3>会社情報</h3>
+                        <div class="company-address-row">
+                            <span class="company-icon">📍</span>
+                            <p class="company-address">
+                                〒160-0023<br>
+                                東京都新宿区西新宿三丁目3番13号<br>
+                                西新宿水間ビル6階
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form method="post">
                         <input type="hidden" name="lang" value="ja">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="company">会社名</label>
-                                <input type="text" id="company" name="company" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="country">国</label>
-                                <input type="text" id="country" name="country" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="company">会社名</label>
+                            <input type="text" id="company" name="company" required>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -1396,7 +1485,7 @@
                         <div class="form-group consent-group">
                             <label for="privacy-consent">
                                 <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
-                                <span>プライバシーポリシーに同意します（<a href="#privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>）</span>
+                                <span>プライバシーポリシーに同意します（<a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>）</span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-submit" disabled>送信する</button>
@@ -1409,16 +1498,30 @@
     <!-- ==================== フッター ==================== -->
     <footer>
         <div class="container">
-            <div class="footer-logo">JBoundex</div>
-            <p>楽天・Amazon運営代行サービス</p>
-            <p style="font-size: 12px; margin-top: 10px;">売上最大化にフルコミットし、EC事業の成功をサポートします</p>
-            <div class="footer-links">
-                <a href="#">プライバシーポリシー</a>
-                <a href="#">利用規約</a>
-                <a href="#">トップページ</a>
-                <a href="#">サイトマップ</a>
+            <div class="footer-inner">
+                <div class="footer-column">
+                    <div class="footer-logo">JBoundex</div>
+                    <div class="footer-address-block">
+                        <div class="footer-address-line">
+                            <span class="footer-icon">📍</span>
+                            <div class="footer-address-text">
+                                〒160-0023<br>
+                                東京都新宿区西新宿三丁目3番13号<br>
+                                西新宿水間ビル6階
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-title">リンク</div>
+                    <ul class="footer-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                        <li><a href="index.html">トップページ</a></li>
+                    </ul>
+                </div>
             </div>
-            <p style="margin-top: 20px; border-top: 1px solid #555; padding-top: 20px;">&copy; 2024 JBoundex. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2025 JBoundex. All rights reserved.</p>
         </div>
     </footer>
 
