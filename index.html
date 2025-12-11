@@ -48,7 +48,6 @@
             color: #bc002d;
             letter-spacing: 3px;
             text-decoration: none;
-            text-transform: uppercase;
         }
 
         .header-nav {
@@ -937,7 +936,6 @@
             color: #bc002d;
             margin-bottom: 14px;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
         .footer-title {
@@ -1071,7 +1069,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">JBoundex</a>
+                <a href="index.html" class="logo">JBoundex</a>
                 <nav class="header-nav">
                     <a href="#services">サービス</a>
                     <a href="#achievements">実績</a>
@@ -1569,7 +1567,7 @@
 
         // フォーム送信処理
         (function() {
-            const cfg = window.JBOUNDEX_CONFIG || {};
+            const cfg = window.JBoundex_CONFIG || {};
             const action = cfg.formAction;
             const form = document.querySelector('.contact-form form');
             const submitButton = form ? form.querySelector('.btn-submit') : null;
