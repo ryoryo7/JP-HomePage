@@ -1418,7 +1418,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form method="post">
+                    <form id="contact-form-ja" method="post">
                         <input type="hidden" name="lang" value="ja">
                         <div class="form-group">
                             <label for="company">会社名</label>
@@ -1568,26 +1568,66 @@
         // フォーム送信処理
         (function() {
             const cfg = window.JBoundex_CONFIG || {};
-            const action = cfg.formAction;
-            const form = document.querySelector('.contact-form form');
+            const endpoint = cfg.formAction;
+            const form = document.querySelector('#contact-form-ja');
             const submitButton = form ? form.querySelector('.btn-submit') : null;
             const consentCheckbox = form ? form.querySelector('#privacy-consent') : null;
+            let isSubmitting = false;
 
-            // フォーム送信先を設定
-            if (form && action) {
-                form.setAttribute('action', action);
-            } else if (!action) {
-                console.warn('formAction is not set in config.js');
-            }
+            if (!form) return;
 
-            // チェックボックスでボタンの有効/無効を切り替え
-            if (form && submitButton && consentCheckbox) {
-                const toggleSubmitState = () => {
-                    submitButton.disabled = !consentCheckbox.checked;
-                };
-                toggleSubmitState();
-                consentCheckbox.addEventListener('change', toggleSubmitState);
+            const updateSubmitState = () => {
+                if (!submitButton) return;
+                const consentOk = consentCheckbox ? consentCheckbox.checked : true;
+                submitButton.disabled = !consentOk || isSubmitting;
+            };
+
+            if (consentCheckbox) {
+                consentCheckbox.addEventListener('change', updateSubmitState);
             }
+            updateSubmitState();
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                if (!endpoint) {
+                    console.warn('formAction is not set in config.js');
+                    alert('送信先の設定に問題があります。時間をおいて再度お試しください。');
+                    return;
+                }
+
+                if (isSubmitting) return;
+
+                isSubmitting = true;
+                if (submitButton) {
+                    submitButton.textContent = '送信中...';
+                }
+                updateSubmitState();
+
+                const formData = new FormData(form);
+
+                fetch(endpoint, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                }).then(function () {
+                    alert('送信が完了しました。ありがとうございました。');
+                    form.reset();
+                    isSubmitting = false;
+                    if (submitButton) {
+                        submitButton.textContent = '送信する';
+                    }
+                    updateSubmitState();
+                }).catch(function (err) {
+                    console.error(err);
+                    alert('送信に失敗しました。時間をおいて再度お試しください。');
+                    isSubmitting = false;
+                    if (submitButton) {
+                        submitButton.textContent = '送信する';
+                    }
+                    updateSubmitState();
+                });
+            });
         })();
     </script>
 </body>
