@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용약관 | JBoundex</title>
+    <link rel="icon" href="../images/jboundex_logo.png" type="image/png">
+    <link rel="alternate" hreflang="ja" href="https://ec.jboundex.com/terms.html" />
+    <link rel="alternate" hreflang="ko" href="https://ec.jboundex.com/ko/terms.html" />
+    <link rel="alternate" hreflang="x-default" href="https://ec.jboundex.com/terms.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #bc002d;
+            --primary-red-dark: #8a0021;
+            --primary-red-light: #d4163f;
+            --bg-light: #faf8f8;
+            --bg-white: #ffffff;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Inter', 'Malgun Gothic', '맑은 고딕', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--bg-white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--text-gray);
+            font-weight: 400;
+            font-size: 0.875rem;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            font-size: 0.875rem;
+        }
+
+        .lang-switch a {
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .lang-switch a.active {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--bg-light);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: var(--text-gray);
+            font-size: 0.9375rem;
+        }
+
+        /* Content */
+        .legal-content {
+            padding: 60px 0;
+        }
+
+        .legal-content section {
+            margin-bottom: 48px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .legal-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 24px 0 12px;
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            color: var(--text-gray);
+            font-size: 0.9375rem;
+        }
+
+        .legal-content ul,
+        .legal-content ol {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--text-gray);
+            font-size: 0.9375rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+        }
+
+        .legal-content .note {
+            background: var(--bg-light);
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin: 16px 0;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-light);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 48px;
+        }
+
+        .toc h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--primary-red);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-inner p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-header {
+                padding: 100px 0 40px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            JBoundex
+            <span>일본 시장 진출 지원</span>
+        </a>
+        <nav>
+            <a href="index.html#services">서비스</a>
+            <a href="index.html#process">프로세스</a>
+            <a href="index.html#faq">자주 묻는 질문</a>
+            <a href="index.html#about">회사 개요</a>
+            <a href="index.html#contact">문의하기</a>
+            <div class="lang-switch">
+                <a href="../terms.html">日本語</a>
+                <a href="terms.html" class="active">한국어</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>이용약관</h1>
+            <p>최종 업데이트: 2025년 1월 1일</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="legal-content">
+        <div class="container">
+            
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h2>목차</h2>
+                <ul>
+                    <li><a href="#article1">제1조 총칙</a></li>
+                    <li><a href="#article2">제2조 정의</a></li>
+                    <li><a href="#article3">제3조 서비스 내용</a></li>
+                    <li><a href="#article4">제4조 계약 성립</a></li>
+                    <li><a href="#article5">제5조 요금 및 지급</a></li>
+                    <li><a href="#article6">제6조 이용자의 의무</a></li>
+                    <li><a href="#article7">제7조 금지사항</a></li>
+                    <li><a href="#article8">제8조 지식재산권</a></li>
+                    <li><a href="#article9">제9조 비밀유지</a></li>
+                    <li><a href="#article10">제10조 면책사항</a></li>
+                    <li><a href="#article11">제11조 손해배상</a></li>
+                    <li><a href="#article12">제12조 계약 해지</a></li>
+                    <li><a href="#article13">제13조 반사회적 세력 배제</a></li>
+                    <li><a href="#article14">제14조 약관 변경</a></li>
+                    <li><a href="#article15">제15조 준거법 및 관할법원</a></li>
+                </ul>
+            </div>
+
+            <!-- Article 1 -->
+            <section id="article1">
+                <h2>제1조 총칙</h2>
+                <p>본 이용약관(이하 "본 약관")은 JBoundex(이하 "당사")가 제공하는 일본 시장 진출 지원 서비스(이하 "본 서비스")의 이용 조건을 정합니다.</p>
+                <p>본 서비스를 이용하는 모든 고객(이하 "이용자")은 본 약관에 동의한 것으로 간주됩니다.</p>
+            </section>
+
+            <!-- Article 2 -->
+            <section id="article2">
+                <h2>제2조 정의</h2>
+                <p>본 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p>
+                <ol>
+                    <li><strong>"본 서비스"</strong>란 당사가 제공하는 일본 시장 진출 지원 관련 컨설팅, EC 운영 대행, 컴플라이언스 지원 및 기타 관련 서비스의 총칭을 의미합니다.</li>
+                    <li><strong>"이용자"</strong>란 본 서비스를 이용하는 법인 또는 개인사업자를 의미합니다.</li>
+                    <li><strong>"계약"</strong>이란 본 약관에 따라 당사와 이용자 간에 체결되는 서비스 이용 계약을 의미합니다.</li>
+                    <li><strong>"성과물"</strong>이란 본 서비스 제공 과정에서 당사가 작성하는 자료, 리포트 및 기타 제작물을 의미합니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 3 -->
+            <section id="article3">
+                <h2>제3조 서비스 내용</h2>
+                <p>당사는 아래 서비스를 제공합니다. 구체적인 서비스 내용은 개별 계약에서 정합니다.</p>
+                <ol>
+                    <li>일본 시장 진출 관련 컨설팅</li>
+                    <li>Amazon Japan, 라쿠텐 시장 등 EC 플랫폼의 출품 및 운영 대행</li>
+                    <li>일본 법규(약기법, 경품표시법, 전기용품안전법 등) 관련 컴플라이언스 지원</li>
+                    <li>상품 페이지 및 광고 크리에이티브 제작</li>
+                    <li>물류 및 풀필먼트 설계 지원</li>
+                    <li>기타 일본 시장 진출 관련 서비스</li>
+                </ol>
+                <div class="note">
+                    ※ 당사는 서비스 내용을 사전 예고 없이 변경할 수 있습니다. 중요한 변경은 사전에 이용자에게 안내합니다.
+                </div>
+            </section>
+
+            <!-- Article 4 -->
+            <section id="article4">
+                <h2>제4조 계약 성립</h2>
+                <ol>
+                    <li>이용자는 당사가 정한 방식에 따라 본 서비스 이용을 신청해야 합니다.</li>
+                    <li>계약은 당사가 이용자의 신청을 승낙하고 그 사실을 통지한 시점에 성립합니다.</li>
+                    <li>당사는 다음의 경우 신청을 승낙하지 않을 수 있습니다.
+                        <ul>
+                            <li>신청 내용에 허위, 오기 또는 누락이 있는 경우</li>
+                            <li>이용자가 과거에 본 약관을 위반한 이력이 있는 경우</li>
+                            <li>기타 당사가 부적절하다고 판단한 경우</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Article 5 -->
+            <section id="article5">
+                <h2>제5조 요금 및 지급</h2>
+                <ol>
+                    <li>본 서비스의 요금은 개별 계약에서 정합니다.</li>
+                    <li>이용자는 당사가 지정한 방법 및 기한 내에 요금을 지급해야 합니다.</li>
+                    <li>지급이 지연된 경우 이용자는 연 14.6%의 지연손해금을 부담합니다.</li>
+                    <li>당사는 경제 상황의 변화 등 사유로 요금을 개정할 수 있으며, 사전에 이용자에게 안내합니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 6 -->
+            <section id="article6">
+                <h2>제6조 이용자의 의무</h2>
+                <p>이용자는 본 서비스 이용에 있어 다음 의무를 부담합니다.</p>
+                <ol>
+                    <li>본 서비스 제공에 필요한 정보, 자료, 데이터 등을 정확하고 적시에 당사에 제공할 것</li>
+                    <li>당사의 문의에 합리적인 기간 내 응답할 것</li>
+                    <li>자사 상품이 일본 법령에 적합한지 확인하고 필요한 허가·승인을 취득할 것</li>
+                    <li>본 약관 및 개별 계약 조항을 준수할 것</li>
+                </ol>
+            </section>
+
+            <!-- Article 7 -->
+            <section id="article7">
+                <h2>제7조 금지사항</h2>
+                <p>이용자는 본 서비스 이용 시 다음 행위를 해서는 안 됩니다.</p>
+                <ol>
+                    <li>법령 또는 공서양속에 위반되는 행위</li>
+                    <li>당사 또는 제3자의 지식재산권, 프라이버시권 등 권리를 침해하는 행위</li>
+                    <li>허위 정보를 제공하는 행위</li>
+                    <li>본 서비스 운영을 방해하는 행위</li>
+                    <li>당사 승인 없이 본 서비스를 제3자에게 재판매·재제공하는 행위</li>
+                    <li>기타 당사가 부적절하다고 판단하는 행위</li>
+                </ol>
+            </section>
+
+            <!-- Article 8 -->
+            <section id="article8">
+                <h2>제8조 지식재산권</h2>
+                <ol>
+                    <li>본 서비스 관련 저작권, 상표권 등 지식재산권은 당사 또는 정당한 권리자에게 귀속됩니다.</li>
+                    <li>성과물의 지식재산권 귀속은 개별 계약에서 정합니다. 별도 정함이 없는 경우 성과물의 저작권은 당사에 귀속되며 이용자에게는 이용권이 허락됩니다.</li>
+                    <li>이용자가 제공한 상품 정보, 이미지 등 소재의 지식재산권은 이용자에게 귀속됩니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 9 -->
+            <section id="article9">
+                <h2>제9조 비밀유지</h2>
+                <ol>
+                    <li>당사와 이용자는 본 서비스 제공과 관련해 알게 된 상대방의 비밀정보를 상대방의 사전 서면 동의 없이 제3자에게 공개하거나 누설해서는 안 됩니다.</li>
+                    <li>전항의 비밀유지의무는 다음 정보에는 적용되지 않습니다.
+                        <ul>
+                            <li>공개받은 시점에 이미 공지되어 있던 정보</li>
+                            <li>공개받은 후 본인 책임 없이 공지된 정보</li>
+                            <li>공개받기 전부터 정당하게 보유하던 정보</li>
+                            <li>정당한 권한이 있는 제3자로부터 비밀유지의무 없이 취득한 정보</li>
+                        </ul>
+                    </li>
+                    <li>본 조의 비밀유지의무는 계약 종료 후에도 3년간 존속합니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 10 -->
+            <section id="article10">
+                <h2>제10조 면책사항</h2>
+                <ol>
+                    <li>당사는 본 서비스 제공에 있어 선량한 관리자의 주의 의무를 다해 업무를 수행하나 특정 성과나 결과를 보장하지 않습니다.</li>
+                    <li>당사는 다음 사유로 발생한 손해에 대해 책임을 지지 않습니다.
+                        <ul>
+                            <li>이용자가 제공한 정보의 오류·부족으로 인한 손해</li>
+                            <li>EC 플랫폼(Amazon Japan, 라쿠텐 시장 등)의 사양 변경, 장애, 계정 정지 등으로 인한 손해</li>
+                            <li>일본 법규 변경으로 인한 손해</li>
+                            <li>천재지변, 전쟁, 테러 등 불가항력으로 인한 손해</li>
+                        </ul>
+                    </li>
+                    <li>당사는 이용자의 상품이 일본 법령에 적합함을 보장하지 않습니다. 법령 적합성의 최종 판단과 책임은 이용자에게 귀속됩니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 11 -->
+            <section id="article11">
+                <h2>제11조 손해배상</h2>
+                <ol>
+                    <li>당사는 본 서비스와 관련해 이용자에게 발생한 손해에 대해 당사의 고의 또는 중과실이 있는 경우를 제외하고, 이용자가 당사에 지급한 최근 12개월 서비스 요금 총액을 한도로 배상 책임을 부담합니다.</li>
+                    <li>당사는 간접손해, 특별손해, 일실이익, 데이터 손실에 대해서는 예견 가능성 여부와 무관하게 책임을 지지 않습니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 12 -->
+            <section id="article12">
+                <h2>제12조 계약 해지</h2>
+                <ol>
+                    <li>당사 또는 이용자는 상대방이 다음 중 하나에 해당하는 경우 최고 없이 즉시 계약을 해지할 수 있습니다.
+                        <ul>
+                            <li>본 약관을 위반하고 상당 기간을 정한 최고에도 시정되지 않는 경우</li>
+                            <li>지급 정지 또는 지급 불능 상태가 된 경우</li>
+                            <li>파산절차, 민사재생절차, 회사갱생절차가 신청된 경우</li>
+                            <li>해산하거나 사업 전부 또는 중요한 일부를 양도한 경우</li>
+                        </ul>
+                    </li>
+                    <li>이용자는 30일 전에 서면 통지함으로써 계약을 해지할 수 있습니다.</li>
+                    <li>계약 종료 시 미지급 요금이 있는 경우 이용자는 즉시 이를 지급해야 합니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 13 -->
+            <section id="article13">
+                <h2>제13조 반사회적 세력 배제</h2>
+                <ol>
+                    <li>당사와 이용자는 자신이 폭력단, 폭력단원, 폭력단 관련 기업 등 반사회적 세력에 해당하지 않음을 표명하고 보증합니다.</li>
+                    <li>당사 또는 이용자는 상대방이 전항을 위반한 경우 최고 없이 즉시 계약을 해지할 수 있습니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 14 -->
+            <section id="article14">
+                <h2>제14조 약관 변경</h2>
+                <ol>
+                    <li>당사는 다음의 경우 본 약관을 변경할 수 있습니다.
+                        <ul>
+                            <li>본 약관 변경이 이용자의 일반 이익에 부합하는 경우</li>
+                            <li>본 약관 변경이 계약 목적에 반하지 않고 변경 필요성, 변경 후 내용의 상당성 및 기타 사정을 고려할 때 합리적인 경우</li>
+                        </ul>
+                    </li>
+                    <li>당사는 본 약관을 변경하는 경우 효력 발생일 30일 전까지 변경 내용과 효력 발생일을 웹사이트에 고지합니다.</li>
+                </ol>
+            </section>
+
+            <!-- Article 15 -->
+            <section id="article15">
+                <h2>제15조 준거법 및 관할법원</h2>
+                <ol>
+                    <li>본 약관은 일본법을 준거법으로 하며 일본법에 따라 해석됩니다.</li>
+                    <li>본 약관 또는 본 서비스에 관한 모든 분쟁은 도쿄지방법원을 제1심의 전속적 합의관할 법원으로 합니다.</li>
+                </ol>
+            </section>
+
+            <div class="note" style="margin-top: 48px;">
+                <p style="margin-bottom: 8px;"><strong>제정일:</strong> 2025년 1월 1일</p>
+                <p style="margin-bottom: 0;"><strong>최종 업데이트:</strong> 2025년 1월 1일</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-inner">
+        <p>&copy; 2025 JBoundex. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">홈</a>
+            <a href="terms.html">이용약관</a>
+            <a href="privacy.html">개인정보 처리방침</a>
+            <a href="../terms.html">日本語</a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

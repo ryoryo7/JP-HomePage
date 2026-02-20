@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="ja" href="https://ec.jboundex.com/" />
     <link rel="alternate" hreflang="ko" href="https://ec.jboundex.com/ko/" />
     <link rel="alternate" hreflang="x-default" href="https://ec.jboundex.com/" />
-    <title>楽天・Amazon運用代行サービス | JBoundex | 利益を軸とした運用支援</title>
-    <meta name="description" content="売上ではなく利益を軸に、楽天・Amazon事業を成長させます。広告・ページ・在庫まで丸投げで一括運用代行。">
-    <link rel="icon" type="image/png" href="images/jboundex_logo.png">
+    <title>Rakuten・Amazon 운용 대행 서비스 | JBoundex | 이익 중심 운용 지원</title>
+    <meta name="description" content="매출이 아닌 이익을 기준으로 Rakuten・Amazon 사업을 성장시킵니다. 광고, 페이지, 재고까지 일괄 운용 대행.">
+    <link rel="icon" type="image/png" href="../images/jboundex_logo.png">
     <style>
         :root {
             --primary: #bc002d;
@@ -20,7 +20,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', 'ヒラギノ角ゴ Pro', 'Yu Gothic', sans-serif;
+            font-family: 'Segoe UI', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
             line-height: 1.6;
             color: var(--ink);
             background: radial-gradient(circle at 10% 20%, #fff7f9 0%, #ffffff 28%, #f7f7f7 60%);
@@ -49,7 +49,7 @@
         .logo {
             font-size: 32px;
             font-weight: 900;
-            font-family: 'Segoe UI Black', 'Arial Black', 'Helvetica Neue', 'ヒラギノ角ゴ Pro W6', 'Yu Gothic', sans-serif;
+            font-family: 'Segoe UI Black', 'Arial Black', 'Helvetica Neue', 'Malgun Gothic', '맑은 고딕', sans-serif;
             color: var(--primary);
             letter-spacing: 3px;
             text-decoration: none;
@@ -69,6 +69,7 @@
             cursor: pointer;
         }
         .header-cta:hover { background-color: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 10px 25px rgba(188, 0, 45, 0.28); }
+
         /* Language switcher */
         .lang-menu {
             position: relative;
@@ -233,7 +234,7 @@
         }
         .hero-cta:hover { transform: translateY(-4px); box-shadow: 0 16px 46px rgba(0, 0, 0, 0.35); filter: saturate(115%); }
 
-        /* セクション共通装飾 */
+        /* 섹션 공통 장식 */
         .concerns h2, .strengths h2, .services h2, .flow h2, .pricing h2, .faq h2, .case-studies h2, .contact h2 {
             position: relative;
             display: inline-block;
@@ -598,7 +599,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 14px;
-            font-family: 'Segoe UI', 'ヒラギノ角ゴ Pro', 'Yu Gothic', sans-serif;
+            font-family: 'Segoe UI', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
             transition: border-color 0.3s, box-shadow 0.3s;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
@@ -872,6 +873,152 @@
           font-size: 12px;
           color: #777;
         }
+
+        /* Testimonial */
+        .testimonial {
+            margin-top: 32px;
+            padding: 32px 36px;
+            background: linear-gradient(135deg, #f9f9fb 0%, #ffffff 100%);
+            border: 1px solid rgba(188, 0, 45, 0.10);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+        .testimonial-logo {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            background: #fff;
+            padding: 4px;
+        }
+        .testimonial-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .testimonial-brand-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--ink);
+        }
+        .testimonial-product-link {
+            font-size: 12px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+        .testimonial-product-link:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+        .testimonial-body {
+            font-size: 15px;
+            line-height: 1.85;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary);
+        }
+        .testimonial-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    background: #fff0f3;
+    border: 1px solid rgba(188, 0, 45, 0.2);
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* ── Platform Logo in Case Card ── */
+.case-platform-logo {
+    display: block;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+/* ── MAKUAKE Banner ── */
+.makuake-banner {
+    padding: 36px 40px;
+    background: linear-gradient(135deg, #fff7f0 0%, #fff 100%);
+    border: 2px solid rgba(255, 120, 0, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.makuake-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ff7800;
+    background: #fff3e6;
+    border: 1px solid rgba(255, 120, 0, 0.25);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.makuake-banner h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 10px;
+}
+.makuake-banner p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 640px;
+    margin: 0 auto 20px;
+}
+.makuake-logo {
+    height: 36px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+.makuake-cta {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #ff7800;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+.makuake-cta:hover {
+    background: #e66b00;
+    transform: translateY(-2px);
+}
+.makuake-section {
+    padding: 40px 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #fdf3f6 100%);
+}
+@media (max-width: 768px) {
+    .makuake-banner { padding: 28px 20px; }
+}
+
     </style>
 </head>
 <body>
@@ -881,17 +1028,17 @@
             <div class="header-content">
                 <a href="index.html" class="logo">JBoundex</a>
                 <nav class="header-nav">
-                    <a href="#services">対応業務範囲</a>
-                    <a href="#pricing">報酬体系</a>
+                    <a href="#services">업무 범위</a>
+                    <a href="#pricing">요금 체계</a>
                     <a href="#faq">FAQ</a>
                     <div class="lang-menu">
                         <button class="lang-toggle" aria-haspopup="true">Language</button>
                         <div class="lang-dropdown">
-                            <a href="index.html" class="active">Japanese</a>
-                            <a href="ko/">Korean</a>
+                            <a href="../">Japanese</a>
+                            <a href="index.html" class="active">Korean</a>
                         </div>
                     </div>
-                    <a href="#contact" class="header-cta">お問い合わせ</a>
+                    <a href="#contact" class="header-cta">문의하기</a>
                 </nav>
             </div>
         </div>
@@ -901,73 +1048,84 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-platform-logos">
-                    <img src="images/Amazonロゴ.svg" alt="Amazon" class="hero-platform-logo">
-                    <img src="images/Rakutenロゴ.svg" alt="Rakuten" class="hero-platform-logo">
+                    <img src="../images/Amazonロゴ.svg" alt="Amazon" class="hero-platform-logo">
+                    <img src="../images/Rakutenロゴ.svg" alt="Rakuten" class="hero-platform-logo">
                 </div>
-                <h1>売上ではなく、利益で<br>楽天・Amazon事業を成長させる</h1>
-                <p>粗利を軸に、楽天・Amazonそれぞれの仕様に合わせて、広告・ページ・在庫まで丸投げで一括運用。止まらない改善を日常的に積み上げます。</p>
+                <h1>매출이 아니라, 이익으로<br>Rakuten・Amazon 사업을 성장시킵니다</h1>
+                <p>매출총이익을 기준으로 Rakuten・Amazon 각 플랫폼의 구조에 맞춰 광고・페이지・재고까지 일괄 위탁 운영합니다. 멈추지 않는 개선을 일상적으로 축적합니다.</p>
                 <div class="hero-strengths">
-                    <div class="strength-badge">粗利ベース運用設計</div>
-                    <div class="strength-badge">丸投げ一括運用</div>
-                    <div class="strength-badge">定例MTG・月次レポート</div>
-                    <div class="strength-badge">RMS / セラーセントラル対応、AI・自動化で効率化</div>
+                    <div class="strength-badge">매출총이익 기반 운용 설계</div>
+                    <div class="strength-badge">일괄 위탁 운영</div>
+                    <div class="strength-badge">정기 MTG・월간 리포트</div>
+                    <div class="strength-badge">RMS / 셀러 센트럴 대응, AI・자동화로 효율화</div>
                 </div>
-                <a href="#contact" class="hero-cta">無料相談へ、現状診断を依頼する</a>
+                <a href="#contact" class="hero-cta">무료 상담으로 현재 상태 진단 요청하기</a>
             </div>
+        </div>
+    </section>
+
+    <!-- MAKUAKE Crowdfunding Banner -->
+    <section class="makuake-section">
+        <div class="makuake-banner">
+            <span class="makuake-badge">New</span>
+            <img src="../images/Makuake_Logo_yoko.png" alt="MAKUAKE" class="makuake-logo">
+            <h3>일본 크라우드펀딩 MAKUAKE 도 대응 가능</h3>
+            <p>일본 최대 크라우드펀딩 플랫폼 <strong>MAKUAKE</strong>를 활용하여, 정식 판매 전에 일본 시장의 반응을 테스트할 수 있습니다. 프로젝트 페이지 작성부터 광고 운용·물류 수배까지 원스톱으로 지원합니다.</p>
+            <a href="#contact" class="makuake-cta">MAKUAKE 상담 문의 →</a>
         </div>
     </section>
 
     <section class="concerns">
         <div class="container">
-            <h2>よくある楽天・Amazon代行の課題</h2>
-            <p class="concerns-subtitle">売上だけで判断すると、在庫・コスト・キャッシュで崩れやすくなります。</p>
+            <h2>Rakuten・Amazon 운영 대행의 대표 과제</h2>
+            <p class="concerns-subtitle">매출만으로 판단하면 재고・비용・현금흐름이 쉽게 흔들립니다.</p>
             <div class="concerns-grid">
-                <div class="concern-card"><p>在庫回転を見ずに広告を回し、欠品や機会損失が起きる</p></div>
-                <div class="concern-card"><p>長期在庫や保管コストを放置して利益が削られる</p></div>
-                <div class="concern-card"><p>送料や物流費用（FBA・RSL等）を加味しないまま広告判断してしまう</p></div>
-                <div class="concern-card"><p>売上は伸びてもキャッシュが苦しくなる</p></div>
+                <div class="concern-card"><p>재고 회전을 보지 않고 광고를 집행해 품절과 기회손실이 발생함</p></div>
+                <div class="concern-card"><p>장기재고와 보관비를 방치해 이익이 감소함</p></div>
+                <div class="concern-card"><p>배송비와 물류비(FBA・RSL 등)를 반영하지 않은 채 광고를 판단함</p></div>
+                <div class="concern-card"><p>매출은 늘어도 현금흐름이 악화됨</p></div>
             </div>
         </div>
     </section>
 
     <section class="strengths">
         <div class="container">
-            <h2>運用方針</h2>
-            <p class="strengths-subtitle">利益構造を踏まえた判断と実務を、継続的に実行します。</p>
+            <h2>운용 방침</h2>
+            <p class="strengths-subtitle">이익 구조를 반영한 판단과 실행을 지속적으로 수행합니다.</p>
 
             <div class="strengths-container">
                 <div class="strength-card">
-                    <h3>粗利を軸とした運用設計</h3>
-                    <p>広告効率やCVRだけでなく、原価・手数料・配送料・物流費用（FBA・RSL等）・在庫回転まで含めて、楽天・Amazonどちらも粗利ベースで運用を設計します。</p>
+                    <h3>매출총이익 중심 운용 설계</h3>
+                    <p>광고 효율과 CVR뿐 아니라 원가・수수료・배송비・물류비(FBA・RSL 등)・재고 회전까지 포함해 Rakuten・Amazon 모두를 매출총이익 기준으로 설계합니다.</p>
                     <ul>
-                        <li>商品別、SKU別の利益構造を可視化</li>
-                        <li>利益ベースでKPIを設計</li>
-                        <li>広告と非広告売上の役割を整理</li>
+                        <li>상품별, SKU별 이익 구조 가시화</li>
+                        <li>이익 기준 KPI 설계</li>
+                        <li>광고 매출과 비광고 매출의 역할 정리</li>
                     </ul>
-                    <img src="images/エクセル.jpg" alt="粗利を軸とした運用設計のイメージ" class="strength-illustration">
+                    <img src="../images/エクセル.jpg" alt="매출총이익 중심 운용 설계 이미지" class="strength-illustration">
 
                 </div>
 
                 <div class="strength-card">
-                    <h3>丸投げ前提の一括運用体制</h3>
-                    <p>日々の広告調整、商品ページ改善、データ確認、施策検討など、クライアント側の都度対応を前提にしません。</p>
+                    <h3>일괄 위탁 전제의 통합 운영 체계</h3>
+                    <p>일일 광고 조정, 상품 페이지 개선, 데이터 점검, 실행안 검토 등을 고객사 수시 대응에 의존하지 않고 수행합니다.</p>
                     <ul>
-                        <li>運用全体を一括してお預かり</li>
-                        <li>止まらない改善を日常的に積み上げ</li>
-                        <li>運用判断と実務を継続実行</li>
+                        <li>운영 전반을 통합 위탁으로 수행</li>
+                        <li>멈추지 않는 개선을 일상적으로 축적</li>
+                        <li>운영 판단과 실무를 지속 실행</li>
                     </ul>
-                    <img src="images/握手.jpg" alt="丸投げ前提の一括運用体制のイメージ" class="strength-illustration">
+                    <img src="../images/握手.jpg" alt="일괄 위탁 전제의 통합 운영 체계 이미지" class="strength-illustration">
                 </div>
 
                 <div class="strength-card">
-                    <h3>透明な共有体制</h3>
-                    <p>企業様ごとにグループチャットを作成。定例Webミーティングと月次レポートを通じて、数値・実施内容・次の打ち手を分かりやすく共有します。</p>
+                    <h3>투명한 공유 체계</h3>
+                    <p>기업별 그룹 채팅을 운영합니다. 정기 웹 미팅과 월간 리포트를 통해 수치・실행 내용・다음 액션을 명확히 공유합니다.</p>
                     <ul>
-                        <li>定例Webミーティング</li>
-                        <li>月次レポート提出</li>
-                        <li>改善内容と次の方針を共有</li>
+                        <li>정기 웹 미팅</li>
+                        <li>월간 리포트 제출</li>
+                        <li>개선 내용과 다음 방침 공유</li>
                     </ul>
-                    <img src="images/チャット.jpg" alt="透明な共有体制のイメージ" class="strength-illustration">
+                    <img src="../images/チャット.jpg" alt="투명한 공유 체계 이미지" class="strength-illustration">
                 </div>
             </div>
         </div>
@@ -975,110 +1133,110 @@
 
     <section class="services" id="services">
         <div class="container">
-            <h2>対応業務範囲</h2>
-            <p class="services-subtitle">日常業務から売上拡大施策まで、標準対応として提供します。</p>
+            <h2>업무 범위</h2>
+            <p class="services-subtitle">일상 운영부터 매출 확대 실행안까지 표준 범위로 제공합니다.</p>
 
             <div class="services-grid">
                 <div class="service-item">
-    <h3>新規出店・ゼロからの立ち上げ</h3>
+    <h3>신규 입점・제로 베이스 런칭</h3>
     <ul>
-        <li>出店プラン選定・アカウント開設サポート</li>
-        <li>ストアページ構築・デザイン</li>
-        <li>商品ページ制作（画像・テキスト）</li>
-        <li>商品登録・カタログ作成</li>
-        <li>初期SEO設計・キーワード選定</li>
+        <li>입점 플랜 선정・계정 개설 지원</li>
+        <li>스토어 페이지 구축・디자인</li>
+        <li>상품 페이지 제작(이미지・텍스트)</li>
+        <li>상품 등록・카탈로그 작성</li>
+        <li>초기 SEO 설계・키워드 선정</li>
     </ul>
 </div>
 
 
 
                 <div class="service-item">
-                    <h3>戦略・利益設計</h3>
+                    <h3>전략・이익 설계</h3>
                     <ul>
-                        <li>商品別原価構造の整理</li>
-                        <li>輸送費、為替を含めた原価把握</li>
-                        <li>楽天・Amazon手数料を加味したコスト整理</li>
-                        <li>粗利額、粗利率の算出</li>
-                        <li>商品別、SKU別の利益構造可視化</li>
-                        <li>利益ベースでのKPI設計</li>
-                        <li>広告と非広告売上の役割設計</li>
+                        <li>상품별 원가 구조 정리</li>
+                        <li>운송비, 환율을 반영한 원가 파악</li>
+                        <li>Rakuten・Amazon 수수료를 반영한 비용 정리</li>
+                        <li>매출총이익 금액・이익률 산출</li>
+                        <li>상품별, SKU별 이익 구조 가시화</li>
+                        <li>이익 기준 KPI 설계</li>
+                        <li>광고 및 비광고 매출 역할 설계</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>商品ページ・SEO対策・コンテンツ</h3>
+                    <h3>상품 페이지・SEO・콘텐츠</h3>
                     <ul>
-                        <li>商品ページ最適化（楽天商品ページ、Amazon商品詳細）</li>
-                        <li>検索語句分析、SEO対策</li>
-                        <li>商品紹介コンテンツ（Amazon A+、楽天ページ改善）の設計支援</li>
-                        <li>商品画像加工（白抜き、サイズ調整等）</li>
+                        <li>상품 페이지 최적화(Rakuten 상품 페이지, Amazon 상세 페이지)</li>
+                        <li>검색어 분석, SEO 대응</li>
+                        <li>상품 소개 콘텐츠(Amazon A+, Rakuten 페이지 개선) 설계 지원</li>
+                        <li>상품 이미지 가공(배경제거, 사이즈 조정 등)</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>新規商品・競合対策</h3>
+                    <h3>신규 상품・경쟁사 대응</h3>
                     <ul>
-                        <li>新規商品登録（楽天商品登録、Amazon ASIN立ち上げ）支援</li>
-                        <li>競合分析および差別化方針設計</li>
+                        <li>신규 상품 등록(Rakuten 상품 등록, Amazon ASIN 런칭) 지원</li>
+                        <li>경쟁사 분석 및 차별화 방침 설계</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>広告・販促施策</h3>
+                    <h3>광고・프로모션 실행</h3>
                     <ul>
-                        <li>広告運用（楽天広告、Amazonスポンサー広告）</li>
-                        <li>広告運用最適化</li>
-                        <li>検索語句精査、除外設定</li>
-                        <li>入札調整、構成改善</li>
-                        <li>各種販促施策の企画、実行支援</li>
+                        <li>광고 운영(Rakuten 광고, Amazon 스폰서 광고)</li>
+                        <li>광고 운영 최적화</li>
+                        <li>검색어 정밀 점검, 제외어 설정</li>
+                        <li>입찰 조정, 구조 개선</li>
+                        <li>각종 프로모션 기획・실행 지원</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>楽天・Amazonストア運用</h3>
+                    <h3>Rakuten・Amazon 스토어 운영</h3>
                     <ul>
-                        <li>ストアページの設計、改善、運用</li>
-                        <li>商品紹介コンテンツの設計・改善支援</li>
+                        <li>스토어 페이지 설계・개선・운영</li>
+                        <li>상품 소개 콘텐츠 설계・개선 지원</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>在庫・物流・運用管理</h3>
+                    <h3>재고・물류・운영 관리</h3>
                     <ul>
-                        <li>物流形態（FBA、自社出荷等）を考慮した利益設計</li>
-                        <li>保管コスト抑制</li>
-                        <li>長期在庫リスク低減</li>
-                        <li>在庫回転を考慮した運用調整</li>
-                        <li>楽天・Amazon最新情報、仕様変更への対応</li>
+                        <li>물류 방식(FBA, 자사출고 등)을 고려한 이익 설계</li>
+                        <li>보관비 절감</li>
+                        <li>장기 재고 리스크 저감</li>
+                        <li>재고 회전을 고려한 운영 조정</li>
+                        <li>Rakuten・Amazon 최신 정책 및 사양 변경 대응</li>
                     </ul>
                 </div>
 
                 <div class="service-item">
-                    <h3>分析・コミュニケーション</h3>
+                    <h3>분석・커뮤니케이션</h3>
                     <ul>
-                        <li>売上分析および効果測定</li>
-                        <li>定例Webミーティング</li>
-                        <li>月1回の運用レポート提出</li>
-                        <li>改善内容と次月方針の共有</li>
-                        <li>メール、電話による随時対応</li>
+                        <li>매출 분석 및 성과 측정</li>
+                        <li>정기 웹 미팅</li>
+                        <li>월 1회 운영 리포트 제출</li>
+                        <li>개선 내용과 다음 달 방침 공유</li>
+                        <li>메일・전화 수시 대응</li>
                     </ul>
                 </div>
 
 
                 <div class="service-item" style="border: 2px solid var(--primary); background: linear-gradient(135deg, #fff0f3 0%, #fff8fa 100%); position: relative;">
-    <h3 style="color: var(--primary);">海外からの輸入対応</h3>
+    <h3 style="color: var(--primary);">해외 수입 대응</h3>
     <ul>
-        <li>成分チェック</li>
-        <li>製造メーカー届出</li>
-        <li>輸入商品届出</li>
-        <li>日本語表示ラベルデータ制作</li>
-        <li>薬事管理料・ラベル貼付作業</li>
-        <li>輸入代行・国際運送</li>
-        <li>関税・消費税等の輸入</li>
-        <li>国内配送</li>
+        <li>성분 확인</li>
+        <li>제조사 신고</li>
+        <li>수입 상품 신고</li>
+        <li>일본어 표시 라벨 데이터 제작</li>
+        <li>약사 규정 관리・라벨 부착 작업</li>
+        <li>수입 대행・국제 운송</li>
+        <li>관세・소비세 등 수입 통관</li>
+        <li>일본 국내 배송</li>
     </ul>
     <p style="margin-top: 16px; padding-top: 14px; border-top: 1px dashed rgba(188, 0, 45, 0.3); font-size: 14px; color: var(--primary); font-weight: 700;">
-        → 日本市場参入・テスト販売もすぐに対応可能
+        → 한국에서 일본으로의 수출 및 테스트 판매도 빠르게 대응 가능합니다
     </p>
 </div>
 
@@ -1089,21 +1247,21 @@
 
     <section class="flow">
         <div class="container">
-            <h2>運用開始までの流れ</h2>
-            <p class="flow-subtitle">相談から運用開始まで、スムーズに進行します</p>
+            <h2>운용 시작까지의 절차</h2>
+            <p class="flow-subtitle">상담부터 운영 시작까지 원활하게 진행합니다</p>
 
             <div class="flow-container">
-                <div class="flow-step"><div class="flow-step-circle">1</div><p>無料相談</p></div>
+                <div class="flow-step"><div class="flow-step-circle">1</div><p>무료 상담</p></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-step-circle">2</div><p>現状把握<br>（利益構造の整理）</p></div>
+                <div class="flow-step"><div class="flow-step-circle">2</div><p>현황 파악<br>(이익 구조 정리)</p></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-step-circle">3</div><p>改善提案・運用設計</p></div>
+                <div class="flow-step"><div class="flow-step-circle">3</div><p>개선 제안・운용 설계</p></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-step-circle">4</div><p>ご契約</p></div>
+                <div class="flow-step"><div class="flow-step-circle">4</div><p>계약 체결</p></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><div class="flow-step-circle">5</div><p>運用開始<br>（定例MTG・月次レポート）</p></div>
+                <div class="flow-step"><div class="flow-step-circle">5</div><p>운영 시작<br>(정기 MTG・월간 리포트)</p></div>
             </div>
-            <img src="images/zoom.jpg" alt="オンラインミーティングのイメージ" class="flow-illustration">
+            <img src="../images/zoom.jpg" alt="온라인 미팅 이미지" class="flow-illustration">
         </div>
     </section>
     
@@ -1111,36 +1269,37 @@
 <section class="case-studies">
   <div class="container">
 
-    <h2>実績・導入事例</h2>
+    <h2>실적・도입 사례</h2>
     <p class="case-studies-subtitle">
-      利益構造を見直した結果、ここまで変わりました
+      이익 구조를 재설계한 결과, 이렇게 달라졌습니다
     </p>
 
     <article class="case-card">
 
-      <span class="case-label">ヘルスケア用品（Amazon）</span>
+      <img src="../images/Amazonロゴ画像.png" alt="Amazon" class="case-platform-logo">
+      <span class="case-label">헬스케어 용품(Amazon)</span>
 
-      <h3 class="case-title">8ヶ月で 売上 650% 成長</h3>
+      <h3 class="case-title">8개월 만에 매출 650% 성장</h3>
       <p class="case-lead">
-        商品ページ改善と利益設計を起点に、段階的に売上と粗利を積み上げた事例。
+        상품 페이지 개선과 이익 설계를 기반으로 매출과 매출총이익을 단계적으로 끌어올린 사례입니다.
       </p>
 
       <div class="case-metrics">
         <div class="metric">
-          <div class="metric-label">売上成長率</div>
+          <div class="metric-label">매출 성장률</div>
           <div class="metric-value">+650%</div>
         </div>
         <div class="metric">
-          <div class="metric-label">運用期間</div>
-          <div class="metric-value">8ヶ月</div>
+          <div class="metric-label">운영 기간</div>
+          <div class="metric-value">8개월</div>
         </div>
         <div class="metric">
-          <div class="metric-label">商品点数</div>
-          <div class="metric-value">6点</div>
+          <div class="metric-label">상품 수</div>
+          <div class="metric-value">6개</div>
         </div>
         <div class="metric">
-          <div class="metric-label">運用形態</div>
-          <div class="metric-value">途中導入</div>
+          <div class="metric-label">운영 형태</div>
+          <div class="metric-value">중도 도입</div>
         </div>
       </div>
 
@@ -1149,71 +1308,86 @@
 
           <div class="chart-bar">
             <div class="chart-bar-inner" style="height:5%;">
-              <span class="chart-bar-value">約120万</span>
+              <span class="chart-bar-value">약120만</span>
             </div>
-            <span class="chart-bar-label">契約時</span>
+            <span class="chart-bar-label">계약 시점</span>
           </div>
 
           <div class="chart-bar">
             <div class="chart-bar-inner" style="height:20%;">
-              <span class="chart-bar-value">3ヶ月</span>
+              <span class="chart-bar-value">3개월</span>
             </div>
-            <span class="chart-bar-label">3ヶ月</span>
+            <span class="chart-bar-label">3개월</span>
           </div>
 
           <div class="chart-bar">
             <div class="chart-bar-inner" style="height:45%;">
-              <span class="chart-bar-value">6ヶ月</span>
+              <span class="chart-bar-value">6개월</span>
             </div>
-            <span class="chart-bar-label">6ヶ月</span>
+            <span class="chart-bar-label">6개월</span>
           </div>
 
           <div class="chart-bar highlight">
             <div class="chart-bar-inner" style="height:100%;">
-              <span class="chart-bar-value">650万</span>
+              <span class="chart-bar-value">650만</span>
             </div>
-            <span class="chart-bar-label">8ヶ月</span>
+            <span class="chart-bar-label">8개월</span>
           </div>
           
 
         </div>
 
         <div class="chart-caption">
-          8ヶ月で 売上 650% 成長
+          8개월 만에 매출 650% 성장
         </div>
          <div class="case-note">
-        本事例は実際の運用結果を基にしたものです。成果は商材・条件により異なります。
+        본 사례는 실제 운영 결과를 기반으로 하며, 성과는 상품과 조건에 따라 달라질 수 있습니다.
       </div>
       </div>
     </article>
 
-    <br></br>
+    <div class="testimonial">
+        <span class="testimonial-label">Voice</span>
+        <div class="testimonial-header">
+            <img src="../images/brandlogo1.jpg" alt="SONREVE" class="testimonial-logo">
+            <div class="testimonial-brand">
+                <span class="testimonial-brand-name">SONREVE</span>
+                <a href="https://www.amazon.co.jp/dp/B0B1HZRXZL" target="_blank" rel="noopener noreferrer" class="testimonial-product-link">Amazon 상품 페이지 보기 →</a>
+            </div>
+        </div>
+        <div class="testimonial-body">
+            광고비를 투입해도 이익이 얼마나 남는지 보이지 않는 상태로 운영하고 있었는데, JBoundex에 의뢰한 후로는 상품별 이익 구조가 명확해져 어디에 투자해야 할지 판단이 달라졌습니다. 한국에서 Amazon 물류센터(FBA)까지의 납품 수배도 일괄 대응해 주기 때문에, 자사에서 일본 측 오퍼레이션을 거의 갖추지 않아도 됩니다. 일본 시장 특유의 Amazon 운영 노하우를 보유하고 있다는 점이 해외 브랜드로서 매우 든든합니다. 매출 성장뿐 아니라 매출총이익이 확실히 개선되고 있다는 실감이 있습니다.
+        </div>
+    </div>
+
+    <br>
     
     <article class="case-card">
 
-      <span class="case-label">香料（楽天）</span>
+      <img src="../images/楽天ロゴ.png" alt="Rakuten" class="case-platform-logo">
+      <span class="case-label">향료(Rakuten)</span>
 
-      <h3 class="case-title">3ヶ月で 売上 363% 成長</h3>
+      <h3 class="case-title">3개월 만에 매출 363% 성장</h3>
       <p class="case-lead">
-        完全ご新規、商品点数1点の無名ブランド様でも月間カテゴリ内最高売上を記録。
+        완전 신규, 상품 1개인 무명 브랜드도 월간 카테고리 최고 매출을 기록했습니다.
       </p>
 
       <div class="case-metrics">
         <div class="metric">
-          <div class="metric-label">売上成長率</div>
+          <div class="metric-label">매출 성장률</div>
           <div class="metric-value">+363%</div>
         </div>
         <div class="metric">
-          <div class="metric-label">運用期間</div>
-          <div class="metric-value">3ヶ月</div>
+          <div class="metric-label">운영 기간</div>
+          <div class="metric-value">3개월</div>
         </div>
         <div class="metric">
-          <div class="metric-label">商品点数</div>
-          <div class="metric-value">1点</div>
+          <div class="metric-label">상품 수</div>
+          <div class="metric-value">1개</div>
         </div>
         <div class="metric">
-          <div class="metric-label">運用形態</div>
-          <div class="metric-value">新規導入</div>
+          <div class="metric-label">운영 형태</div>
+          <div class="metric-value">신규 도입</div>
         </div>
       </div>
 
@@ -1224,45 +1398,60 @@
             <div class="chart-bar-inner" style="height:0%;">
               <span class="chart-bar-value">0</span>
             </div>
-            <span class="chart-bar-label">契約時</span>
+            <span class="chart-bar-label">계약 시점</span>
           </div>
 
           <div class="chart-bar">
             <div class="chart-bar-inner" style="height:20%;">
-              <span class="chart-bar-value">1ヶ月</span>
+              <span class="chart-bar-value">1개월</span>
             </div>
-            <span class="chart-bar-label">1ヶ月</span>
+            <span class="chart-bar-label">1개월</span>
           </div>
 
           <div class="chart-bar">
             <div class="chart-bar-inner" style="height:45%;">
-              <span class="chart-bar-value">2ヶ月</span>
+              <span class="chart-bar-value">2개월</span>
             </div>
-            <span class="chart-bar-label">2ヶ月</span>
+            <span class="chart-bar-label">2개월</span>
           </div>
 
           <div class="chart-bar highlight">
             <div class="chart-bar-inner" style="height:100%;">
-              <span class="chart-bar-value">80万</span>
+              <span class="chart-bar-value">80만</span>
             </div>
-            <span class="chart-bar-label">3ヶ月</span>
+            <span class="chart-bar-label">3개월</span>
           </div>
 
         </div>
 
         <div class="chart-caption">
     <ul style="list-style: disc; padding-left: 20px; margin: 0; text-align: left; display: inline-block;">
-        <li>3ヶ月で 売上 363% 成長</li>
-        <li>ROAS：500%超達成</li>
+        <li>3개월 만에 매출 363% 성장</li>
+        <li>ROAS: 500% 이상 달성</li>
     </ul>
 </div>
       </div>
 
       <div class="case-note">
-        本事例は実際の運用結果を基にしたものです。成果は商材・条件により異なります。
+        본 사례는 실제 운영 결과를 기반으로 하며, 성과는 상품과 조건에 따라 달라질 수 있습니다.
       </div>
 
     </article>
+
+    <div class="testimonial">
+        <span class="testimonial-label">Voice</span>
+        <div class="testimonial-header">
+            <img src="../images/11201_logo_tate_bl.png" alt="11201" class="testimonial-logo">
+            <div class="testimonial-brand">
+                <span class="testimonial-brand-name">11201</span>
+                <a href="https://item.rakuten.co.jp/11201-fragrance/fragrance-001/" target="_blank" rel="noopener noreferrer" class="testimonial-product-link">Rakuten 상품 페이지 보기 →</a>
+            </div>
+        </div>
+        <div class="testimonial-body">
+            제로 베이스에서 상품도 1개뿐인 상태였지만, 첫 달부터 매출이 발생해 3개월 만에 카테고리 내 최고 매출을 달성했습니다. 광고 효율뿐 아니라 페이지 구성・SEO・재고 계획까지 일괄로 맡길 수 있어, 자체적으로는 도저히 감당할 수 없었던 개선이 일상적으로 이루어지고 있습니다. 이익이 보이는 리포트 덕분에 다음 판단에도 망설임이 없어졌습니다.
+        </div>
+    </div>
+
   </div>
 </section>
 
@@ -1270,59 +1459,59 @@
 
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2>報酬体系・契約条件</h2>
-            <p class="pricing-subtitle">事業規模や体制に合わせて、2つのプランをご用意しています</p>
+            <h2>요금 체계・계약 조건</h2>
+            <p class="pricing-subtitle">사업 규모와 운영 체계에 맞춰 2가지 플랜을 제공합니다</p>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>スタンダードプラン</h3>
-                    <div class="price">月額：15万円〜</div>
+                    <h3>스탠더드 플랜</h3>
+                    <div class="price">월액: 15만 엔(약 150만 원)~</div>
                     <ul>
-                        <li>初期費用：5万円〜</li>
-                        <li>変動報酬：月次粗利の8%（相談可）</li>
-                        <li>契約期間：3ヶ月毎更新</li>
-                        <li>丸投げ前提の一括運用</li>
-                        <li>定例Webミーティング</li>
-                        <li>月次レポート提出</li>
+                        <li>초기 비용: 5만 엔~</li>
+                        <li>변동 보수: 월 매출총이익의 8%(협의 가능)</li>
+                        <li>계약 기간: 3개월 단위 갱신</li>
+                        <li>일괄 위탁 운영</li>
+                        <li>정기 웹 미팅</li>
+                        <li>월간 리포트 제출</li>
                     </ul>
                 </div>
 
                 <div class="pricing-card">
-                    <h3>プレミアムプラン</h3>
-                    <div class="price">月額：50万円〜</div>
+                    <h3>프리미엄 플랜</h3>
+                    <div class="price">월액: 50만 엔~</div>
                     <ul>
-                        <li>初期費用：5万円〜</li>
-                        <li>変動報酬：なし</li>
-                        <li>契約期間：6ヶ月毎更新</li>
-                        <li>丸投げ前提の一括運用</li>
-                        <li>定例Webミーティング</li>
-                        <li>月次レポート提出</li>
+                        <li>초기 비용: 5만 엔~</li>
+                        <li>변동 보수: 없음</li>
+                        <li>계약 기간: 6개월 단위 갱신</li>
+                        <li>일괄 위탁 운영</li>
+                        <li>정기 웹 미팅</li>
+                        <li>월간 리포트 제출</li>
                     </ul>
                 </div>
             </div>
 
             <div class="pricing-notice">
-                <p><span class="emphasis">粗利の定義</span><br>
-                粗利 ＝ (楽天/Amazon)売上 − 商品原価 − 各種手数料 − 配送料 − 物流関連費用（FBA・RSL等）</p>
+                <p><span class="emphasis">매출총이익 정의</span><br>
+                매출총이익 = (Rakuten/Amazon) 매출 - 상품 원가 - 각종 수수료 - 배송비 - 물류 관련 비용(FBA・RSL 등)</p>
             </div>
         </div>
     </section>
 
     <section class="strengths">
         <div class="container">
-            <h2 style="margin-bottom: 12px;">この価格体系でご提供できる理由</h2>
-            <p class="strengths-subtitle" style="margin-bottom: 40px;">無駄な工数を価格に転嫁しない、再現性のある仕組みを前提にしています。</p>
+            <h2 style="margin-bottom: 12px;">이 가격 체계로 제공할 수 있는 이유</h2>
+            <p class="strengths-subtitle" style="margin-bottom: 40px;">불필요한 공수를 가격에 전가하지 않는, 재현 가능한 운영 구조를 전제로 합니다.</p>
 
             <div class="strengths-container">
                 <div class="strength-card">
-                    <h3>テクノロジーによる業務効率化</h3>
-                    <p>データ集計、分析、レポーティング、広告管理などをAIや自動化ツールで効率化し、属人的な運用ではなく仕組みとして設計します。</p>
-                    <img src="images/AI.jpg" alt="テクノロジーによる業務効率化のイメージ" class="strength-illustration">
+                    <h3>기술 기반 업무 효율화</h3>
+                    <p>데이터 집계, 분석, 리포팅, 광고 관리를 AI와 자동화 도구로 효율화하여 개인 역량 의존이 아닌 시스템으로 설계합니다.</p>
+                    <img src="../images/AI.jpg" alt="기술 기반 업무 효율화 이미지" class="strength-illustration">
                 </div>
                 <div class="strength-card">
-                    <h3>長期伴走を前提とした設計</h3>
-                    <p>短期の利益最大化ではなく、粗利が伸びる中で新しい取り組みを共に育てていくパートナーとして、長期的にご一緒することを前提としています。</p>
-                    <img src="images/goal.jpg" alt="長期伴走を前提とした設計のイメージ" class="strength-illustration">
+                    <h3>장기 동반을 전제로 한 설계</h3>
+                    <p>단기 이익 극대화가 아니라, 매출총이익이 성장하는 과정에서 새로운 시도를 함께 키워가는 장기 파트너십을 전제로 합니다.</p>
+                    <img src="../images/goal.jpg" alt="장기 동반을 전제로 한 설계 이미지" class="strength-illustration">
                 </div>
             </div>
         </div>
@@ -1330,35 +1519,35 @@
 
     <section class="faq" id="faq">
         <div class="container">
-            <h2>よくあるご質問</h2>
-            <p class="faq-subtitle">ご不明点があれば、お気軽にご相談ください</p>
+            <h2>자주 묻는 질문</h2>
+            <p class="faq-subtitle">궁금한 점이 있으면 편하게 문의해 주세요</p>
 
             <div class="faq-list">
     <div class="faq-item">
-        <div class="faq-question">楽天・Amazonにまだ出店していませんが、対応可能ですか？</div>
+        <div class="faq-question">Rakuten・Amazon에 아직 입점하지 않았는데도 지원 가능한가요?</div>
         <div class="faq-answer">
-            はい、可能です。アカウント開設から商品ページ作成、販売開始まで一括でサポートします。
+            네, 가능합니다. 계정 개설부터 상품 페이지 제작, 판매 시작까지 일괄 지원합니다.
         </div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">急ぎの依頼や相談にはどのくらいで対応してもらえますか？</div>
+        <div class="faq-question">긴급 요청이나 상담은 얼마나 빨리 대응하나요?</div>
         <div class="faq-answer">
-            ご契約後、企業様ごとに専用のチャットスペースを設けます。ご連絡いただければ原則即日で返信いたします。
+            계약 후 기업별 전용 채팅 공간을 운영하며, 문의 주시면 원칙적으로 당일 회신합니다.
         </div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">定例ミーティングの頻度と内容は？</div>
+        <div class="faq-question">정기 미팅의 빈도와 내용은 어떻게 되나요?</div>
         <div class="faq-answer">
-            通常は月1回のオンラインミーティングを実施し、数値報告・改善内容・次月の方針を共有します。頻度は契約内容に応じて調整可能です。
+            일반적으로 월 1회 온라인 미팅을 진행하며, 수치 보고・개선 내용・다음 달 방침을 공유합니다. 빈도는 계약 조건에 따라 조정 가능합니다.
         </div>
     </div>
 
     <div class="faq-item">
-        <div class="faq-question">初期費用は何に使われますか？</div>
+        <div class="faq-question">초기 비용은 어디에 사용되나요?</div>
         <div class="faq-answer">
-            商品ページの作成・編集、競合分析、SEO対策などに充てられます。
+            상품 페이지 제작 및 편집, 경쟁사 분석, SEO 대응 등에 사용됩니다.
         </div>
     </div>
 </div>
@@ -1368,8 +1557,8 @@
     <section class="final-cta">
         <div class="container">
             <div class="final-cta-content">
-                <h2>まずはご相談ください</h2>
-                <p>売上を作るだけでなく、利益を残し続ける運用を、構造から一緒に考えます。</p>
+                <h2>먼저 상담해 주세요</h2>
+                <p>매출만이 아니라 이익이 남는 운영을 구조부터 함께 설계합니다.</p>
             </div>
         </div>
     </section>
@@ -1378,17 +1567,17 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h2>楽天・運用の無料相談</h2>
-                    <p>現状の数値や運用体制を伺い、粗利を軸にした改善ポイントを整理します。広告、ページ、在庫、コストまで一体で設計し、止まらない改善を積み上げます。</p>
+                    <h2>Rakuten・Amazon 운영 무료 상담</h2>
+                    <p>현재 수치와 운영 체계를 확인하고, 매출총이익 기준의 개선 포인트를 정리합니다. 광고, 페이지, 재고, 비용을 통합 설계하여 멈추지 않는 개선을 축적합니다.</p>
                     <p class="contact-pricing">
-    初期費用：5万円〜<br>
-    ・スタンダード：月額15万円＋月次粗利の8%（相談可）<br>
-    ・プレミアム：月額50万円〜
+    초기 비용: 5만 엔~<br>
+    ・스탠더드: 월액 15만 엔 + 월 매출총이익의 8%(협의 가능)<br>
+    ・프리미엄: 월액 50만 엔~
 </p>
-<p>まずは運用状況と目標をお聞かせください。現実的な改善ステップをご提案します。</p>
+<p>먼저 현재 운영 상황과 목표를 알려주세요. 현실적인 개선 단계를 제안드립니다.</p>
 
                     <div class="company-info">
-                        <h3>会社情報</h3>
+                        <h3>회사 정보</h3>
                         <div class="company-address-row">
                             <span class="company-icon">📍</span>
                             <p class="company-address">
@@ -1405,84 +1594,84 @@
                 </div>
 
                 <div class="contact-form">
-                    <form id="contact-form-ja" method="post">
-                        <input type="hidden" name="lang" value="ja">
+                    <form id="contact-form-ko" method="post">
+                        <input type="hidden" name="lang" value="ko">
 
                         <div class="form-group">
-                            <label for="company">会社名</label>
+                            <label for="company">회사명</label>
                             <input type="text" id="company" name="company" required>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="person">ご担当者名</label>
+                                <label for="person">담당자명</label>
                                 <input type="text" id="person" name="person">
                             </div>
                             <div class="form-group">
-                                <label for="email">ご担当者メールアドレス</label>
+                                <label for="email">담당자 이메일 주소</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="website">Webサイトまたは楽天・AmazonストアURL</label>
+                            <label for="website">웹사이트 또는 Rakuten・Amazon 스토어 URL</label>
                             <input type="url" id="website" name="website">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="category">商品カテゴリ</label>
+                                <label for="category">상품 카테고리</label>
                                 <select id="category" name="category">
-                                    <option value="">カテゴリを選択</option>
-                                    <option value="beauty">ビューティー・パーソナルケア</option>
-                                    <option value="health">ヘルス・ウェルネス</option>
-                                    <option value="electronics">電子機器</option>
-                                    <option value="home">ホーム・キッチン</option>
-                                    <option value="food">食品・飲料</option>
-                                    <option value="fashion">ファッション・アパレル</option>
-                                    <option value="other">その他</option>
+                                    <option value="">카테고리 선택</option>
+                                    <option value="beauty">뷰티・퍼스널 케어</option>
+                                    <option value="health">헬스・웰니스</option>
+                                    <option value="electronics">전자기기</option>
+                                    <option value="home">홈・키친</option>
+                                    <option value="food">식품・음료</option>
+                                    <option value="fashion">패션・의류</option>
+                                    <option value="other">기타</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="market">現在の主要市場</label>
+                                <label for="market">현재 주요 시장</label>
                                 <input type="text" id="market" name="market">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="sales">月間売上（概算）</label>
+                            <label for="sales">월간 매출(개산)</label>
                             <select id="sales" name="sales">
-                                <option value="">レンジを選択</option>
-                                <option value="under-10k">¥100万円未満</option>
-                                <option value="10k-50k">¥100万円 - ¥500万円</option>
-                                <option value="50k-100k">¥500万円 - ¥1,000万円</option>
-                                <option value="100k-500k">¥1,000万円 - ¥5,000万円</option>
-                                <option value="over-500k">¥5,000万円以上</option>
+                                <option value="">구간 선택</option>
+                                <option value="under-10k">¥100만 미만</option>
+                                <option value="10k-50k">¥100만 - ¥500만</option>
+                                <option value="50k-100k">¥500만 - ¥1,000만</option>
+                                <option value="100k-500k">¥1,000만 - ¥5,000만</option>
+                                <option value="over-500k">¥5,000만 이상</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="goals">現状の課題・目標</label>
-                            <textarea id="goals" name="goals" placeholder="例：広告費は使っているが粗利が残らない、在庫回転が悪い、A+やSEOを改善したい など"></textarea>
+                            <label for="goals">현재 과제・목표</label>
+                            <textarea id="goals" name="goals" placeholder="예: 광고비는 쓰고 있지만 매출총이익이 남지 않음, 재고 회전이 낮음, A+나 SEO를 개선하고 싶음 등"></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="contact-method">ご希望の連絡方法</label>
+                            <label for="contact-method">희망 연락 방법</label>
                             <select id="contact-method" name="contact-method">
-                                <option value="email">メール</option>
-                                <option value="video">ビデオ通話</option>
-                                <option value="phone">電話</option>
+                                <option value="email">이메일</option>
+                                <option value="video">화상 통화</option>
+                                <option value="phone">전화</option>
                             </select>
                         </div>
 
                         <div class="form-group consent-group">
                             <label for="privacy-consent">
                                 <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
-                                <span>プライバシーポリシーに同意します（<a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>）</span>
+                                <span>개인정보 처리방침에 동의합니다(<a href="privacy.html" target="_blank" rel="noopener noreferrer">개인정보 처리방침</a>)</span>
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-submit" disabled>送信する</button>
+                        <button type="submit" class="btn btn-submit" disabled>전송하기</button>
                     </form>
                 </div>
             </div>
@@ -1510,12 +1699,12 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-title">リンク</div>
+                    <div class="footer-title">링크</div>
                     <ul class="footer-list">
-                        <li><a href="privacy.html">プライバシーポリシー</a></li>
-                        <li><a href="terms.html">利用規約</a></li>
-                        <li><a href="index.html">トップページ</a></li>
-                        <li><a href="ko/">한국어 사이트</a></li>
+                        <li><a href="privacy.html">개인정보 처리방침</a></li>
+                        <li><a href="terms.html">이용약관</a></li>
+                        <li><a href="index.html">홈페이지</a></li>
+                        <li><a href="../">日本語サイト</a></li>
                     </ul>
                 </div>
             </div>
@@ -1523,7 +1712,7 @@
         </div>
     </footer>
 
-    <script src="config.js"></script>
+    <script src="../config.js"></script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1557,7 +1746,7 @@
         (function() {
             const cfg = window.JBoundex_CONFIG || {};
             const endpoint = cfg.formAction;
-            const form = document.querySelector('#contact-form-ja');
+            const form = document.querySelector('#contact-form-ko');
             const submitButton = form ? form.querySelector('.btn-submit') : null;
             const consentCheckbox = form ? form.querySelector('#privacy-consent') : null;
             let isSubmitting = false;
@@ -1580,31 +1769,31 @@
 
                 if (!endpoint) {
                     console.warn('formAction is not set in config.js');
-                    alert('送信先の設定に問題があります。時間をおいて再度お試しください。');
+                    alert('전송처 설정에 문제가 있습니다. 잠시 후 다시 시도해주세요.');
                     return;
                 }
 
                 if (isSubmitting) return;
 
                 isSubmitting = true;
-                if (submitButton) submitButton.textContent = '送信中...';
+                if (submitButton) submitButton.textContent = '전송 중...';
                 updateSubmitState();
 
                 const formData = new FormData(form);
 
                 fetch(endpoint, { method: 'POST', body: formData, mode: 'no-cors' })
                     .then(function () {
-                        alert('送信が完了しました。ありがとうございました。');
+                        alert('전송이 완료되었습니다. 감사합니다.');
                         form.reset();
                         isSubmitting = false;
-                        if (submitButton) submitButton.textContent = '送信する';
+                        if (submitButton) submitButton.textContent = '전송하기';
                         updateSubmitState();
                     })
                     .catch(function (err) {
                         console.error(err);
-                        alert('送信に失敗しました。時間をおいて再度お試しください。');
+                        alert('전송에 실패했습니다. 잠시 후 다시 시도해주세요.');
                         isSubmitting = false;
-                        if (submitButton) submitButton.textContent = '送信する';
+                        if (submitButton) submitButton.textContent = '전송하기';
                         updateSubmitState();
                     });
             });
