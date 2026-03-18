@@ -999,10 +999,20 @@
     max-width: 640px;
     margin: 0 auto 20px;
 }
+.makuake-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
 .makuake-logo {
     height: 36px;
     object-fit: contain;
-    margin-bottom: 16px;
+}
+.campfire-logo {
+    height: 88px;
+    object-fit: contain;
 }
 .makuake-cta {
     display: inline-block;
@@ -1025,6 +1035,10 @@
 }
 @media (max-width: 768px) {
     .makuake-banner { padding: 28px 20px; }
+    .makuake-logos {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
 }
 
     </style>
@@ -1076,9 +1090,12 @@
     <section class="makuake-section">
         <div class="makuake-banner">
             <span class="makuake-badge">New</span>
-            <img src="../images/Makuake_Logo_yoko.png" alt="MAKUAKE" class="makuake-logo">
-            <h3>일본 크라우드펀딩 MAKUAKE 도 대응 가능</h3>
-            <p>일본 최대 크라우드펀딩 플랫폼 <strong>MAKUAKE</strong>를 활용하여, 정식 판매 전에 일본 시장의 반응을 테스트할 수 있습니다. 프로젝트 페이지 작성부터 광고 운용·물류 수배까지 원스톱으로 지원합니다.</p>
+            <div class="makuake-logos">
+                <img src="../images/CAMPFIRE.png" alt="CAMPFIRE" class="campfire-logo">
+                <img src="../images/Makuake_Logo_yoko.png" alt="MAKUAKE" class="makuake-logo">
+            </div>
+            <h3>일본 크라우드펀딩(Makuake·CAMPFIRE) 대응도 가능합니다.</h3>
+            <p>일본 최대 규모의 크라우드펀딩 플랫폼인 <strong>Makuake</strong>와 <strong>CAMPFIRE</strong>를 활용하여, 정식 판매 전에 일본 시장의 반응을 테스트할 수 있습니다. 프로젝트 페이지 제작부터 광고 운영, 물류 준비까지 원스톱으로 지원합니다.</p>
             <a href="#contact" class="makuake-cta">MAKUAKE 상담 문의 →</a>
         </div>
     </section>
